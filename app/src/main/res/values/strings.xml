@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="equal_sign">=</string>
+    <string name="plus_sign">+</string>
+    <string name="minus_sign">-</string>
+    <string name="mul_sign">X</string>
+    <string name="div_sign">/</string>
+    <string name="calculate_string">Calculate</string>
 </resources>

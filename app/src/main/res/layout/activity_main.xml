@@ -61,7 +61,8 @@
         android:inputType="numberDecimal"
         app:layout_constraintLeft_toRightOf="@+id/tvAddRes"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="3dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
 
     <EditText
         android:id="@+id/edtSub1"
@@ -162,7 +163,8 @@
         android:inputType="numberSigned"
         app:layout_constraintLeft_toRightOf="@+id/tvMulRes"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="113dp" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtSubRes" />
 
     <EditText
         android:id="@+id/edtDiv1"
@@ -212,7 +214,8 @@
         android:inputType="numberSigned"
         app:layout_constraintLeft_toRightOf="@+id/tvDivRes"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="164dp" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtMulRes" />
 
     <Button
         android:id="@+id/btnCalculate"

@@ -5,376 +5,229 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
 
     <!--  2nd Child Layout  (Nested In Parent Layout) with Horizontal Orientation -->
 
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.3"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.36"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.63"
-        tools:layout_editor_absoluteX="259dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline4"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.69"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="284dp" />
-
     <EditText
         android:id="@+id/edtAdd1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAddOp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintRight_toLeftOf="@+id/tvAddOp" />
+
+    <TextView
+        android:id="@+id/tvAddOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus_sign"
+        android:textAlignment="center"
+        app:layout_constraintRight_toLeftOf="@+id/edtAdd2"
+        app:layout_constraintLeft_toRightOf="@+id/edtAdd1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtAdd2" />
 
     <EditText
         android:id="@+id/edtAdd2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
-        app:layout_constraintRight_toLeftOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAddRes"
+        app:layout_constraintLeft_toRightOf="@+id/tvAddOp"
+        app:layout_constraintRight_toLeftOf="@+id/tvAddRes" />
+
+    <TextView
+        android:id="@+id/tvAddRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equal_sign"
+        android:textAlignment="center"
+        app:layout_constraintRight_toLeftOf="@+id/edtAddRes"
+        app:layout_constraintLeft_toRightOf="@+id/edtAdd2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtAddRes" />
 
     <EditText
         android:id="@+id/edtAddRes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        app:layout_constraintLeft_toRightOf="@+id/tvAddRes"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
-
-    <TextView
-        android:id="@+id/tvAddOp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/plus_sign"
-        android:textAlignment="center"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline"
-        app:layout_constraintRight_toLeftOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvAddRes"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/equal_sign"
-        android:textAlignment="center"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline3"
-        app:layout_constraintRight_toLeftOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="3dp" />
 
     <EditText
         android:id="@+id/edtSub1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberSigned"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvSubOp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toBottomOf="@+id/edtAdd1"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintRight_toLeftOf="@+id/tvSubOp" />
+
+    <TextView
+        android:id="@+id/tvSubOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minus_sign"
+        android:textAlignment="center"
+        app:layout_constraintRight_toLeftOf="@+id/edtSub2"
+        app:layout_constraintLeft_toRightOf="@+id/edtSub1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtSub2" />
 
     <EditText
         android:id="@+id/edtSub2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberSigned"
-        app:layout_constraintTop_toBottomOf="@+id/edtAdd2"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
-        app:layout_constraintRight_toLeftOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvSubRes"
+        app:layout_constraintLeft_toRightOf="@+id/tvSubOp"
+        app:layout_constraintRight_toLeftOf="@+id/tvSubRes" />
+
+    <TextView
+        android:id="@+id/tvSubRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equal_sign"
+        android:textAlignment="center"
+        app:layout_constraintRight_toLeftOf="@+id/edtSubRes"
+        app:layout_constraintLeft_toRightOf="@+id/edtSub2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtSubRes" />
 
     <EditText
         android:id="@+id/edtSubRes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberSigned"
+        app:layout_constraintLeft_toRightOf="@+id/tvSubRes"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toBottomOf="@+id/edtAddRes"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
-
-    <TextView
-        android:id="@+id/tvSubOp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/minus_sign"
-        android:textAlignment="center"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline"
-        app:layout_constraintRight_toLeftOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/tvAddOp" />
-
-    <TextView
-        android:id="@+id/tvSubRes"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/equal_sign"
-        android:textAlignment="center"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline3"
-        app:layout_constraintRight_toLeftOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/tvAddRes" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtAddRes" />
 
     <EditText
         android:id="@+id/edtMul1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberSigned"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvMulOp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toBottomOf="@+id/edtSub1"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintRight_toLeftOf="@+id/tvMulOp" />
+
+    <TextView
+        android:id="@+id/tvMulOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mul_sign"
+        android:textAlignment="center"
+        app:layout_constraintRight_toLeftOf="@+id/edtMul2"
+        app:layout_constraintLeft_toRightOf="@+id/edtMul1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtMul2" />
 
     <EditText
         android:id="@+id/edtMul2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberSigned"
-        app:layout_constraintTop_toBottomOf="@+id/edtSub2"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
-        app:layout_constraintRight_toLeftOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvMulRes"
+        app:layout_constraintLeft_toRightOf="@+id/tvMulOp"
+        app:layout_constraintRight_toLeftOf="@+id/tvMulRes" />
+
+    <TextView
+        android:id="@+id/tvMulRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equal_sign"
+        android:textAlignment="center"
+        app:layout_constraintRight_toLeftOf="@+id/edtMulRes"
+        app:layout_constraintLeft_toRightOf="@+id/edtMul2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtMulRes" />
 
     <EditText
         android:id="@+id/edtMulRes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:ems="10"
         android:inputType="numberSigned"
+        app:layout_constraintLeft_toRightOf="@+id/tvMulRes"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toBottomOf="@+id/edtSubRes"
-        android:layout_marginEnd="8dp" />
-
-    <TextView
-        android:id="@+id/tvMulRes"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/equal_sign"
-        android:textAlignment="center"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline3"
-        app:layout_constraintRight_toLeftOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubRes" />
-
-    <TextView
-        android:id="@+id/tvMulOp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/mul_sign"
-        android:textAlignment="center"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline"
-        app:layout_constraintRight_toLeftOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubOp" />
+        tools:layout_editor_absoluteY="113dp" />
 
     <EditText
         android:id="@+id/edtDiv1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberSigned"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvDivOp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/edtMul1"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintRight_toLeftOf="@+id/tvDivOp" />
+
+    <TextView
+        android:id="@+id/tvDivOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/div_sign"
+        android:textAlignment="center"
+        app:layout_constraintRight_toLeftOf="@+id/edtDiv2"
+        app:layout_constraintLeft_toRightOf="@+id/edtDiv1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtDiv2" />
 
     <EditText
         android:id="@+id/edtDiv2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberSigned"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
-        app:layout_constraintRight_toLeftOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/edtMul2"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvDivRes"
+        app:layout_constraintLeft_toRightOf="@+id/tvDivOp"
+        app:layout_constraintRight_toLeftOf="@+id/tvDivRes" />
+
+    <TextView
+        android:id="@+id/tvDivRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equal_sign"
+        android:textAlignment="center"
+        app:layout_constraintRight_toLeftOf="@+id/edtDivRes"
+        app:layout_constraintLeft_toRightOf="@+id/edtDiv2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtDivRes" />
 
     <EditText
         android:id="@+id/edtDivRes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberSigned"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+        app:layout_constraintLeft_toRightOf="@+id/tvDivRes"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtMulRes"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
-
-    <TextView
-        android:id="@+id/tvDivOp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/div_sign"
-        android:textAlignment="center"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline"
-        app:layout_constraintRight_toLeftOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/tvMulOp" />
-
-    <TextView
-        android:id="@+id/tvDivRes"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/equal_sign"
-        android:textAlignment="center"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline3"
-        app:layout_constraintRight_toLeftOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/tvMulRes" />
+        tools:layout_editor_absoluteY="164dp" />
 
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/calculate_string"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="204dp"
+        android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="30dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/edtDiv2"
-        app:layout_constraintHorizontal_bias="0.498" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
